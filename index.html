@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisrat Niguse - Professional Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e40af', // Darker Blue
+                        'secondary-gray': '#e5e7eb', // Light Gray
+                        'accent-yellow': '#fcd34d', // Gold/Yellow accent
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for smoother scrolling and background pattern */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Very light background */
+            scroll-behavior: smooth;
+        }
+        .section-header {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 4px;
+            background-color: #1e40af; /* Primary Blue underline */
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-extrabold text-primary-blue hover:text-blue-700 transition duration-300">
+                Bisrat Niguse
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#home" class="text-gray-600 hover:text-primary-blue transition duration-300">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-primary-blue transition duration-300">Services</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-primary-blue transition duration-300">Portfolio</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary-blue transition duration-300">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-secondary-gray transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#home" class="block py-3 px-6 text-gray-700 hover:bg-secondary-gray">Home</a>
+            <a href="#services" class="block py-3 px-6 text-gray-700 hover:bg-secondary-gray">Services</a>
+            <a href="#portfolio" class="block py-3 px-6 text-gray-700 hover:bg-secondary-gray">Portfolio</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-secondary-gray">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Home) -->
+    <section id="home" class="bg-primary-blue text-white pt-24 pb-20 sm:pt-32 sm:pb-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fadeInUp">
+                Hello, I'm Bisrat Niguse
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-8 max-w-3xl mx-auto">
+                A professional dedicated to clear communication, digital content creation, and modern web development.
+            </p>
+            <div class="space-x-4">
+                <a href="#contact" class="inline-block bg-accent-yellow text-primary-blue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                    Let's Connect
+                </a>
+                <a href="#services" class="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-primary-blue transition duration-300 transform hover:scale-105 mt-4 sm:mt-0">
+                    My Expertise
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (What I Do) -->
+    <section id="services" class="py-20 sm:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold section-header text-primary-blue mb-12">My Core Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Service 1: Translation -->
+                <div class="bg-secondary-gray p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
+                    <div class="text-4xl text-primary-blue mb-4">
+                        <span role="img" aria-label="Translation Icon">🌍</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Professional Translation</h3>
+                    <p class="text-gray-600">
+                        Accurate and culturally sensitive translation services. I bridge language gaps to ensure your message is perfectly understood, maintaining the original context and tone.
+                    </p>
+                    <ul class="mt-4 text-sm text-gray-700 list-disc pl-5">
+                        <li>Document & Technical Translation</li>
+                        <li>Localization</li>
+                        <li>Quality Assurance Checks</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Computer Writing / Content Creation -->
+                <div class="bg-secondary-gray p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
+                    <div class="text-4xl text-primary-blue mb-4">
+                        <span role="img" aria-label="Writing Icon">✍️</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Digital Content Writing</h3>
+                    <p class="text-gray-600">
+                        Crafting compelling and clear written content for the digital world. From detailed technical guides to engaging marketing copy.
+                    </p>
+                    <ul class="mt-4 text-sm text-gray-700 list-disc pl-5">
+                        <li>Technical Documentation</li>
+                        <li>Blog Posts & Articles</li>
+                        <li>Copyediting & Proofreading</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Website Development -->
+                <div class="bg-secondary-gray p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
+                    <div class="text-4xl text-primary-blue mb-4">
+                        <span role="img" aria-label="Code Icon">💻</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Website Development</h3>
+                    <p class="text-gray-600">
+                        Building fast, modern, and fully responsive websites using HTML, CSS (Tailwind), and JavaScript. Focused on user experience and clean code.
+                    </p>
+                    <ul class="mt-4 text-sm text-gray-700 list-disc pl-5">
+                        <li>Front-End Development (HTML/Tailwind/JS)</li>
+                        <li>Responsive Design (Mobile-First)</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Projects) -->
+    <section id="portfolio" class="py-20 sm:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold section-header text-primary-blue mb-12">Featured Work</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Sample Website -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <img src="https://placehold.co/600x400/1e40af/ffffff?text=Web+Project+1" alt="Placeholder for a web development project" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-2">Modern Business Site</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Developed a fully responsive static website for a small consulting firm, prioritizing speed and clean design. (HTML, Tailwind CSS)
+                        </p>
+                        <span class="inline-block bg-accent-yellow text-primary-blue text-xs font-bold px-3 py-1 rounded-full">Web Dev</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Translation Case Study -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <img src="https://placehold.co/600x400/059669/ffffff?text=Translation+Case+Study" alt="Placeholder for a translation project" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-2">Technical Manual Translation</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Successful translation of a 50-page technical hardware manual, ensuring precise terminology and adherence to industry standards.
+                        </p>
+                        <span class="inline-block bg-accent-yellow text-primary-blue text-xs font-bold px-3 py-1 rounded-full">Translation</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Content Creation Sample -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
+                    <img src="https://placehold.co/600x400/4f46e5/ffffff?text=Content+Drafting+Sample" alt="Placeholder for a content writing project" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-2">SEO Blog Content Series</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Authored a series of five optimized articles focused on cloud computing concepts, driving organic traffic by 20%. (Computer Writing)
+                        </p>
+                        <span class="inline-block bg-accent-yellow text-primary-blue text-xs font-bold px-3 py-1 rounded-full">Content Creation</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 sm:py-28 bg-primary-blue text-white">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold section-header text-accent-yellow mb-4">Get In Touch</h2>
+            <p class="text-xl mb-10 font-light">
+                Ready to start a project? Send me a message and let's discuss how my skills can help you achieve your goals.
+            </p>
+            
+            <form action="#" method="POST" class="space-y-6 bg-white p-8 rounded-xl shadow-2xl text-gray-800">
+                <div>
+                    <input type="text" name="name" placeholder="Your Name" required 
+                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200">
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Your Email" required 
+                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200">
+                </div>
+                <div>
+                    <textarea name="message" rows="4" placeholder="Your Message (Project details, language pair, etc.)" required 
+                              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-blue focus:border-primary-blue transition duration-200"></textarea>
+                </div>
+                <div>
+                    <!-- Note: In a real environment, this form would require a backend service (e.g., Firebase, email service) to actually send the data. -->
+                    <button type="submit" class="w-full bg-accent-yellow text-primary-blue font-bold py-3 px-8 rounded-lg shadow-md hover:bg-yellow-400 transition duration-300 transform hover:scale-105">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+            <div class="mt-10 text-lg">
+                <p>or connect directly:</p>
+                <p class="mt-2 font-semibold">
+                    Email: <a href="mailto:bisratniguse0@gmail.com" class="underline hover:text-accent-yellow transition duration-300">bisratniguse0@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2024 Bisrat Niguse. All rights reserved.</p>
+            <p class="mt-2">Built with <span class="text-red-500">&hearts;</span> and Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle mobile menu visibility
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Hide menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
